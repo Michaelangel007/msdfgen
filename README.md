@@ -174,3 +174,10 @@ would represent a square with magenta and yellow edges,
 { 0, 1; (+1.6, -0.8; -1.6, -0.8); # }
 ```
 is a teardrop shape formed by a single cubic Bézier curve.
+
+## OpenMP
+
+There is preliminary multi-threaded support using OpenMP.
+
+Compile with `MSDFGEN_USE_OPENMP`
+
