@@ -27,7 +27,7 @@ and [LodePNG](http://lodev.org/lodepng/).
 
 Additionaly, there is the [main.cpp](main.cpp), which wraps the functionality into
 a comprehensive standalone console program. To start using the program immediately,
-a Windows binary of this program, [msdfgen.exe](msdfgen.exe), is available in the root directory.
+a Windows binary of this program, [msdfgen.exe](bin/msdfgen.exe), is available in the root directory.
 
 ## Console commands
 
