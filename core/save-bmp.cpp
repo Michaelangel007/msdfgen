@@ -71,7 +71,7 @@ bool saveBmp(const Bitmap<float> &bitmap, const char *filename) {
     const uint8_t padding[4] = { };
     for (int y = 0; y < bitmap.height(); ++y) {
         for (int x = 0; x < bitmap.width(); ++x) {
-            uint8_t px = (uint8_t) clamp(int(bitmap(x, y)*0x100), 0xff);
+            uint8_t px = (uint8_t) clamp(int(bitmap(x, y)*0xFF), 0xff);
             fwrite(&px, sizeof(uint8_t), 1, file);
             fwrite(&px, sizeof(uint8_t), 1, file);
             fwrite(&px, sizeof(uint8_t), 1, file);
@@ -94,9 +94,9 @@ bool saveBmp(const Bitmap<FloatRGB> &bitmap, const char *filename) {
     for (int y = 0; y < bitmap.height(); ++y) {
         for (int x = 0; x < bitmap.width(); ++x) {
             uint8_t bgr[3] = {
-                (uint8_t) clamp(int(bitmap(x, y).b*0x100), 0xff),
-                (uint8_t) clamp(int(bitmap(x, y).g*0x100), 0xff),
-                (uint8_t) clamp(int(bitmap(x, y).r*0x100), 0xff)
+                (uint8_t) clamp(int(bitmap(x, y).b*0xFF), 0xff),
+                (uint8_t) clamp(int(bitmap(x, y).g*0xFF), 0xff),
+                (uint8_t) clamp(int(bitmap(x, y).r*0xFF), 0xff)
             };
             fwrite(bgr, sizeof(uint8_t), 3, file);
         }
